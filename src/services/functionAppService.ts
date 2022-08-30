@@ -101,7 +101,7 @@ export class FunctionAppService extends BaseService {
       const response = await Utils.runWithRetry(async () => {
         const listFunctionsResponse = await this.sendApiRequest("GET", getTokenUrl);
 
-        if (listFunctionsResponse.status !== 200 || listFunctionsResponse.data.value.length === 0) {
+        if (listFunctionsResponse.status !== 200) {
           this.log(`-> Function App not ready. Retry ${retries++} of ${FunctionAppService.retryCount}...`);
           const response = this.stringify(listFunctionsResponse.data);
           throw new Error(
