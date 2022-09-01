@@ -66,6 +66,7 @@
     "request": "^2.81.0",
     "rimraf": "^3.0.2",
     "semver": "^7.3.7",
+    "unzipper": "^0.10.11"
     "xml2js": "^0.4.23",
     "zip-folder": "^1.0.0"
   },
