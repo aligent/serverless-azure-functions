@@ -1,5 +1,11 @@
-import { Runtime, isNodeRuntime, isPythonRuntime, getRuntimeVersion, getRuntimeLanguage, getFunctionWorkerRuntime } from "./runtime";
-
+import {
+  Runtime,
+  isNodeRuntime,
+  isPythonRuntime,
+  getRuntimeVersion,
+  getRuntimeLanguage,
+  getFunctionWorkerRuntime,
+} from "./runtime";
 
 describe("Runtime", () => {
   it("identifies node runtimes correctly", () => {
@@ -26,7 +32,7 @@ describe("Runtime", () => {
     expect(getRuntimeVersion(Runtime.NODE10)).toBe("10");
     expect(getRuntimeVersion(Runtime.NODE12)).toBe("12");
     expect(getRuntimeVersion(Runtime.NODE14)).toBe("14");
-    expect(getRuntimeVersion(Runtime.NODE14)).toBe("16");
+    expect(getRuntimeVersion(Runtime.NODE16)).toBe("16");
     expect(getRuntimeVersion(Runtime.PYTHON36)).toBe("3.6");
     expect(getRuntimeVersion(Runtime.PYTHON37)).toBe("3.7");
     expect(getRuntimeVersion(Runtime.PYTHON38)).toBe("3.8");
